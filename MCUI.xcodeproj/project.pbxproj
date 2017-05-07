@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		740903161EBEEB3600C55A28 /* MCUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 740903141EBEEB3600C55A28 /* MCUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7409031E1EBEEBAD00C55A28 /* HorizontalUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7409031D1EBEEBAD00C55A28 /* HorizontalUITableView.swift */; };
+		740903201EBEEC9900C55A28 /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7409031F1EBEEC9900C55A28 /* HorizontalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		740903111EBEEB3600C55A28 /* MCUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MCUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740903141EBEEB3600C55A28 /* MCUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCUI.h; sourceTree = "<group>"; };
 		740903151EBEEB3600C55A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7409031D1EBEEBAD00C55A28 /* HorizontalUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalUITableView.swift; sourceTree = "<group>"; };
+		7409031F1EBEEC9900C55A28 /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +50,20 @@
 		740903131EBEEB3600C55A28 /* MCUI */ = {
 			isa = PBXGroup;
 			children = (
+				7409031C1EBEEB7200C55A28 /* HorizontalTableView */,
 				740903141EBEEB3600C55A28 /* MCUI.h */,
 				740903151EBEEB3600C55A28 /* Info.plist */,
 			);
 			path = MCUI;
+			sourceTree = "<group>";
+		};
+		7409031C1EBEEB7200C55A28 /* HorizontalTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7409031D1EBEEBAD00C55A28 /* HorizontalUITableView.swift */,
+				7409031F1EBEEC9900C55A28 /* HorizontalTableViewCell.swift */,
+			);
+			name = HorizontalTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,7 @@
 					740903101EBEEB3600C55A28 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5TUV64E72W;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7409031E1EBEEBAD00C55A28 /* HorizontalUITableView.swift in Sources */,
+				740903201EBEEC9900C55A28 /* HorizontalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +259,7 @@
 		7409031A1EBEEB3600C55A28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5TUV64E72W;
@@ -254,6 +272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nez.MCUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -261,6 +280,7 @@
 		7409031B1EBEEB3600C55A28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5TUV64E72W;
