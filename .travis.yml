@@ -1,3 +1,14 @@
 language: swift
 xcode_project: MCUI.xcodeproj # path to your xcodeproj folder
-xcode_scheme: MCUI
+xcode_scheme: MCUI.xcscheme
+osx_image: xcode8.3
+xcode_sdk: iphonesimulator9.3
+env:
+  global: 
+    - FRAMEWORK_NAME=MCUI
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
